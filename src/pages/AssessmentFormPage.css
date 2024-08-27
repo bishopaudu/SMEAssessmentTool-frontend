@@ -1,0 +1,173 @@
+
+
+ /* .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #ffffff; 
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+  }
+  
+  .welcome-text {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .welcome-text h2 {
+    color: #00bfff; 
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .welcome-text p {
+    color: #cccccc; 
+    font-size: 16px;
+  }
+  
+  .progress-bar-container {
+    width: 100%;
+    background-color: #444; 
+    border-radius: 4px;
+    margin-bottom: 20px;
+    height: 8px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: #00bfff; 
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .go-home-button {
+    background-color: #003366; 
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #ffffff; 
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .back-button,
+  .next-button,
+  .submit-button {
+    background-color: #003366; 
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #ffffff; 
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .back-button:hover,
+  .next-button:hover,
+  .submit-button:hover {
+    background-color: #002147; 
+  }
+  
+  .back-button:disabled {
+    background-color: #666; 
+    cursor: not-allowed;
+  }
+  
+  h2, p {
+    color: #ffffff; 
+  }*/
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #ffffff; /* Consistent dark background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+  }
+  
+  .welcome-text {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .welcome-text h2 {
+    color: #00bfff;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .welcome-text p {
+    /*color: #cccccc;*/ /* Match the hero subtext color */
+    font-size: 16px;
+    color: #002147;
+  }
+  
+  .progress-bar-container {
+    width: 100%;
+    background-color: #444;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    height: 8px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: #00bfff;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Add space between buttons */
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .go-home-button,
+  .back-button,
+  .next-button,
+  .submit-button {
+    background-color: #003366;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    min-width: 150px; /* Set a minimum width for consistency */
+    text-align: center;
+    display: inline-block;
+  }
+  
+  .back-button:hover,
+  .next-button:hover,
+  .submit-button:hover,
+  .go-home-button:hover {
+    background-color: #002147;
+  }
+  
+  .back-button:disabled {
+    background-color: #666;
+    cursor: not-allowed;
+  }
+  
+  
+  

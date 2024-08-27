@@ -1,0 +1,114 @@
+/* App container */
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  background-color: white; /* App background set to white */
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  flex-wrap: wrap;
+}
+
+.header {
+  font-size: 2.5em;
+  color: #003366;
+  text-align: center;
+  flex: 1;
+  margin: 0;
+}
+
+/* Admin button styling */
+.admin-button {
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.admin-button:hover {
+  background-color: #002147;
+  transform: translateY(-3px);
+}
+
+
+
+/* TextField styling */
+.MuiOutlinedInput-root {
+  background-color: white;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-color: #003366; /* Blue border for inputs */
+}
+
+.MuiInputLabel-root {
+  color: #003366; /* Darker label text */
+}
+
+.MuiOutlinedInput-input {
+  color: #003366; /* Dark input text */
+}
+
+/* Admin login button */
+.admin-login {
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.admin-login:hover {
+  background-color: #002147;
+  transform: translateY(-3px);
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header {
+    font-size: 2em; /* Adjust header size for tablets */
+  }
+
+  .admin-button {
+    font-size: 1em; /* Adjust button size */
+    padding: 8px 15px;
+  }
+
+  .navbar {
+    flex-direction: column; /* Stack elements in the navbar vertically on smaller screens */
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    font-size: 1.5em; /* Further reduce header size for mobile */
+  }
+
+  .admin-button {
+    font-size: 0.9em;
+    padding: 8px 10px; /* Adjust button size for smaller screens */
+    margin-top: 10px;
+  }
+
+  .navbar {
+    padding: 5px;
+  }
+}
