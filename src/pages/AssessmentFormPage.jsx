@@ -12,6 +12,7 @@ const AssessmentFormPage = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [loading,setLoading] = useState(true);
   const navigate = useNavigate()
+ 
 
   const goHome = () => {
     navigate('/')
@@ -22,7 +23,7 @@ const AssessmentFormPage = () => {
     const fetchQuestions = async () => {
       setLoading(true)
       try {
-        const response = await axios.get('http://localhost:5000/api/questions');
+        const response = await axios.get('https://smeassessmenttool.onrender.com/api/questions');
         setQuestions(response.data);
       } catch (error) {
         console.error('Error fetching questions:', error);

@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { List, Typography, Divider, Box, Paper, CircularProgress, TextField, Button } from '@mui/material';
 import axios from 'axios';
@@ -14,7 +13,7 @@ const ResponsesList = () => {
       setLoading(true); // Show loading spinner
 
       try {
-        const response = await axios.get('http://localhost:5000/api/responses', {
+        const response = await axios.get('https://smeassessmenttool.onrender.com/api/responses', {
           headers: {
             Authorization: `Bearer ${token}`, // Include token in request header
           },

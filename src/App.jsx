@@ -28,7 +28,7 @@ function App() {
         "username":adminUsername,
         "password":adminPassword
       }
-      const response = await axios.post('http://localhost:5000/api/admin/login',data);
+      const response = await axios.post('https://smeassessmenttool.onrender.com/api/admin/login',data);
       const {token} = response.data;
       localStorage.setItem('adminToken', token);
       navigate('/admindashboard');

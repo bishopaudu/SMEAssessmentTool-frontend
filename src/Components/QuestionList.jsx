@@ -27,7 +27,7 @@ const QuestionList = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/questions/${id}`, {
+      await axios.delete(`${BASE_URL}/api/questions/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

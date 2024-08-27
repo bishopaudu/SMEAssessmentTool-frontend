@@ -17,7 +17,7 @@ const QuestionForm = ({ onQuestionAdded }) => {
     const token = localStorage.getItem('adminToken');
     try {
       await axios.post(
-        'http://localhost:5000/api/questions',
+        'https://smeassessmenttool.onrender.com/api/questions',
         { question, options },
         {
           headers: {
