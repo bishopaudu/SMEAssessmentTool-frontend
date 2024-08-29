@@ -11,7 +11,7 @@ const QuestionList = () => {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/questions', {
+        const response = await axios.get('https://smeassessmenttool.onrender.com/api/questions', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -27,7 +27,7 @@ const QuestionList = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`${BASE_URL}/api/questions/${id}`, {
+      await axios.delete(`https://smeassessmenttool.onrender.com/api/questions/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
