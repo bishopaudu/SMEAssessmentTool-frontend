@@ -60,7 +60,7 @@ const AssessmentFormPage = () => {
       selectedOption
     }));
     try {
-      const response = await axios.post('http://localhost:5000/api/responses', { answers: formattedAnswers });
+      const response = await axios.post('http://smeassessmenttool.onrender.com/api/responses', { answers: formattedAnswers });
       console.log('Assessment submitted:', response.data);
       setIsSubmitted(true);
     } catch (error) {
