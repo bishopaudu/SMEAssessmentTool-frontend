@@ -55,6 +55,26 @@ const ResponsesList = () => {
     setGroupedResponses(filteredResponses);
   };
 
+  const handleDownload = async () => {
+    try {
+      const response = await axios.get('http://smeassessmenttool.onrender.com/api/responses/download-csv', {
+         headers: {
+            Authorization: `Bearer ${token}`, // Include token in request header
+          },
+        responseType: 'blob',
+      });
+      const url = window.URL.createObjectURL(new Blob([response.data]));
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', 'responses.csv');
+      document.body.appendChild(link);
+      link.click();
+      setLoading(false);
+    } catch (error) {
+      console.error('Error downloading the CSV file', error);
+    }
+  }
+
   return (
     <Box>
       <Typography variant="h4" style={{ marginBottom: '20px' }}>Responses</Typography>
@@ -70,6 +90,9 @@ const ResponsesList = () => {
         />
         <Button variant="contained" color="primary" onClick={handleFilter}>
           Filter
+        </Button>
+        <Button variant="contained" color="primary" onClick={handleDownload}>
+          Download Responses
         </Button>
       </Box>
 
