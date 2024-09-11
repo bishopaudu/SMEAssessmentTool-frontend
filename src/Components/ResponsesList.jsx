@@ -56,6 +56,7 @@ const ResponsesList = () => {
   };
 
   const handleDownload = async () => {
+    const token = localStorage.getItem('adminToken'); 
     try {
       const response = await axios.get('http://smeassessmenttool.onrender.com/api/responses/download-csv', {
          headers: {
