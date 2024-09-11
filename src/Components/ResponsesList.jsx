@@ -58,7 +58,7 @@ const ResponsesList = () => {
   const handleDownload = async () => {
     const token = localStorage.getItem('adminToken'); 
     try {
-      const response = await axios.get('http://smeassessmenttool.onrender.com/api/responses/download-csv', {
+      const response = await axios.get('https://smeassessmenttool.onrender.com/api/responses/download-csv', {
          headers: {
             Authorization: `Bearer ${token}`, // Include token in request header
           },
