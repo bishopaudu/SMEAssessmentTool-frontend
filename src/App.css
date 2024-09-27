@@ -4,8 +4,16 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  height: 100vh; 
   padding: 10px;
   background-color: white; /* App background set to white */
+
+  /* Add background image */
+  background-image: url('assets/bgimages/bg2.webp'); /* Change the path accordingly */
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  min-height: 100vh; /* Makes sure the background covers the full viewport height */
 }
 
 /* Navbar styling */
@@ -15,7 +23,7 @@
   align-items: center;
   width: 100%;
   padding: 10px;
-  background-color: white;
+  background-color:transparent;
   flex-wrap: wrap;
 }
 
@@ -95,6 +103,30 @@
     flex-direction: column; /* Stack elements in the navbar vertically on smaller screens */
     text-align: center;
   }
+}
+
+/* Custom input field styles - consistent border color */
+.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+  border-color: #003366; /* Set the same border color for both email and password inputs */
+  border-radius: 8px; /* Rounded corners for inputs */
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #003366; /* Same focus color for both inputs */
+}
+
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #003366;
+}
+
+.admin-login:hover {
+  transform: translateY(-2px);
+  background-color: #002244;
+}
+
+/* Ensure the modal also has rounded corners */
+.MuiDialog-paper {
+  border-radius: 16px !important;
 }
 
 @media (max-width: 480px) {
