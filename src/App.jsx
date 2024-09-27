@@ -53,7 +53,7 @@ function App() {
         <Hero />
       </div>
 
-      <Dialog
+       {/*<Dialog
   open={adminModalOpen}
   onClose={closeAdminModal}
   maxWidth="sm"
@@ -64,7 +64,7 @@ function App() {
     },
   }}
 >
-  <DialogContent style={{ backgroundColor: '#f5f5f5', padding: '30px 20px' }}>
+ <DialogContent style={{ backgroundColor: '#f5f5f5', padding: '30px 20px' }}>
     <Typography
       variant="h5"
       style={{ color: '#003366', textAlign: 'center', marginBottom: '20px' }}
@@ -138,7 +138,91 @@ function App() {
       {loading ? <CircularProgress size={24} style={{ color: 'white' }} /> : 'Login'}
     </button>
   </DialogActions>
+</Dialog>*/}
+<Dialog open={adminModalOpen} onClose={closeAdminModal} maxWidth="xs" fullWidth>
+  <DialogContent style={{ backgroundColor: '#f5f5f5', padding: '30px 20px', borderRadius: '8px' }}>
+    <Typography
+      variant="h5"
+      style={{ color: '#003366', textAlign: 'center', marginBottom: '20px' }}
+    >
+      Admin Login
+    </Typography>
+    <TextField
+      margin="dense"
+      label="Username"
+      type="email"
+      fullWidth
+      variant="outlined"
+      color="primary" // Same color for focus as password input
+      onChange={(e) => setAdminUsername(e.target.value)}
+      InputLabelProps={{
+        style: { color: '#003366' },
+      }}
+      InputProps={{
+        style: { color: '#003366' },
+        classes: {
+          notchedOutline: 'custom-outline',
+        },
+      }}
+    />
+    <TextField
+      margin="dense"
+      label="Password"
+      type="password"
+      fullWidth
+      variant="outlined"
+      color="primary" // Same color as the email input
+      onChange={(e) => setAdminPassword(e.target.value)}
+      InputLabelProps={{
+        style: { color: '#003366' },
+      }}
+      InputProps={{
+        style: { color: '#003366' },
+        classes: {
+          notchedOutline: 'custom-outline',
+        },
+      }}
+    />
+    {error && <Typography color="error" style={{ marginTop: 10, textAlign: 'center' }}>{error}</Typography>}
+  </DialogContent>
+  <DialogActions style={{ justifyContent: 'center', padding: '20px' }}>
+    <Button
+      onClick={closeAdminModal}
+      style={{ color: '#003366', fontWeight: 'bold', textTransform: 'uppercase' }}
+    >
+      Cancel
+    </Button>
+    <button
+      className="admin-login"
+      onClick={adminLogin}
+      disabled={loading}
+      style={{
+        backgroundColor: loading ? '#99b3cc' : '#003366', // Color change when loading
+        color: 'white',
+        border: 'none',
+        borderRadius: '8px',
+        padding: '10px 20px',
+        fontSize: '1rem',
+        cursor: loading ? 'not-allowed' : 'pointer', // Prevent clicking while loading
+        textTransform: 'uppercase',
+        marginLeft: '10px',
+        transition: 'all 0.3s ease',
+        boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
+        display: 'flex',
+        alignItems: 'center', // Center loading spinner and text
+        justifyContent: 'center',
+        width: '100px', // Set fixed width to prevent resizing on loading
+      }}
+    >
+      {loading ? (
+        <CircularProgress size={24} style={{ color: 'white' }} />
+      ) : (
+        'Login'
+      )}
+    </button>
+  </DialogActions>
 </Dialog>
+
 
 
     </div>
