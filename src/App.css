@@ -9,11 +9,11 @@
   background-color: white; /* App background set to white */
 
   /* Add background image */
-  background-image: url('assets/bgimages/bg2.webp'); /* Change the path accordingly */
-  background-size: cover; /* Ensures the image covers the entire background */
+  background-image: url('assets/bgimages/bg2.webp'); 
+  background-size: cover; 
   background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-  min-height: 100vh; /* Makes sure the background covers the full viewport height */
+  background-repeat: no-repeat; 
+  min-height: 100vh;
 }
 
 /* Navbar styling */
@@ -29,9 +29,10 @@
 
 .header {
   font-size: 2.5em;
-  color: #003366;
+  color: whitesmoke;
   text-align: center;
   flex: 1;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin: 0;
 }
 
