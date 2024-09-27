@@ -7,6 +7,7 @@
   height: 100vh; 
   padding: 10px;
   background-color: white; /* App background set to white */
+  position: relative; /* Needed for overlay positioning */
 
   /* Add background image */
   background-image: url('assets/bgimages/bg2.webp'); 
@@ -14,6 +15,24 @@
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; 
   min-height: 100vh;
+}
+
+/* Add dark overlay */
+.app::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark overlay with 50% opacity */
+  z-index: 1; /* Ensure overlay is on top of the background */
+}
+
+/* Ensure content stays above the overlay */
+.app > * {
+  position: relative;
+  z-index: 2; /* Content remains on top of the overlay */
 }
 
 /* Navbar styling */
